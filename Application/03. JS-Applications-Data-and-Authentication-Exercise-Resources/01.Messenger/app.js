@@ -9,7 +9,7 @@ function attachEvents() {
 
 const authorInput = document.querySelector('[name="author"]');
 const contentInput = document.querySelector('[name="content"]');
-const list = document.getElementById('messages');
+const messageList = document.getElementById('messages');
 
 
 attachEvents();
@@ -24,7 +24,7 @@ async function onSubmit() {
     const result = await createMessage({author, content});
 
     contentInput.value = '';
-    list.value += '\n' + `${author}: ${content}`;
+    messageList.value += '\n' + `${author}: ${content}`;
 }
 
 // load and display all messages
@@ -35,7 +35,7 @@ async function loadMessages() {
 
     const messages = Object.values(data);
 
-    list.value = messages.map(m => `${m.author}: ${m.content}`).join('\n');
+    messageList.value = messages.map(m => `${m.author}: ${m.content}`).join('\n');
 }
 
 // post message
