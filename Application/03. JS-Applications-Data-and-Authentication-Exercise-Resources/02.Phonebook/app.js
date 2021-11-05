@@ -12,7 +12,7 @@ attachEvents();
 let personInput = document.getElementById('person');
 let phoneInput = document.getElementById('phone');
 
-async function loadHandler(e) {
+async function loadHandler() {
 
     let ul = document.getElementById('phonebook');
 
