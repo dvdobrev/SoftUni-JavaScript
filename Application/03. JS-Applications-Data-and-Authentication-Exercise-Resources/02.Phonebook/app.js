@@ -5,7 +5,6 @@ function attachEvents() {
     loadButton.addEventListener('click', loadHandler);
     creatButton.addEventListener('click', createHandler);
 
-   
 }
 
 attachEvents();
@@ -34,16 +33,14 @@ async function loadHandler(e) {
         deleteButton.setAttribute(`data-id`,`${element._id}`)
         deleteButton.addEventListener('click', deleteHandler);
         li.appendChild(deleteButton);
-        ul.appendChild(li);
-          
+        ul.appendChild(li);         
     });
      
 }
 
 async function deleteHandler(e) {
     let entryToDelete = e.target;
-    let buttonId = entryToDelete.dataset.id;
-    
+    let buttonId = entryToDelete.dataset.id;  
 
     const url = 'http://localhost:3030/jsonstore/phonebook/';
     const res = await fetch(url + buttonId, {
