@@ -1,15 +1,3 @@
-
-
-
-
-
-
-
-
-
-
-
-
 const tbody = document.querySelector('tbody');
 const createForm = document.getElementById('createForm');
 const editForm = document.getElementById('editForm');
